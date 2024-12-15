@@ -1,0 +1,55 @@
+.Form-input-container{
+    display: grid;
+    justify-content: center;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+
+.QRcodeLink{
+    width: 35vw;
+    height: 5vh;
+    padding: 0.5rem 1rem;
+        border:1px solid rgb(0, 85, 255) ;
+        outline:none;
+    border-radius: 1rem;
+    background-color: hsl(217, 33%, 5%);
+    color: white;
+        min-width: 300px;
+        max-width: 600px;
+}
+
+
+.QRcodeLink:hover{
+    outline:1px solid rgb(0, 85, 255) ;
+}
+
+
+.QRcodeLink:focus{
+    outline:1px solid rgb(0, 85, 255) ;
+    border:1px solid rgb(0, 85, 255) ;
+}
+
+
+.Label-container{
+    margin-left:9vw ;
+    margin-bottom: 1vw;
+}
+
+.input-button-container{
+    position: relative;
+
+}
+.CreateQRCode-btn{
+   position: absolute;
+    background-color: hsl(220, 100%, 55%);
+    color: white;
+    width: 9vw;
+    height: 5vh;
+    margin-top: 7px;
+    margin-right: 1rem;
+    right: 0;
+    min-width: 100px;
+}

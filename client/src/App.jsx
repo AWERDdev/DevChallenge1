@@ -8,16 +8,6 @@ function App() {
     
     <>
       <Body />
-    
-    
-    
-    
-      {/* <Router>
-        <Routes>
-        <Route path="/ViewQR" element={<ViewQR />} />
-        <Route path="/About" element={<About />} />
-        </Routes>
-      </Router> */}
       
     </>
 
