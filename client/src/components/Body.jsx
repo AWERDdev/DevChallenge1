@@ -48,15 +48,13 @@ function Body() {
      
             </label>
           </div>
-          <input
-            type="text"
-            id="QRcodeLink"
-            value={Input_value}
-            onChange={(e) => setInput_value(e.target.value)}
-            placeholder="Enter link"
-          />
+          <div className="input-button-container">
+         <input type="text" className="QRcodeLink" id="QRcodeLink"placeholder="Enter an URL"value={Input_value}onChange={(e)=> setInput_value(e.target.value)}/>
+         <button className="CreateQRCode-btn" id="CreateQRCode-btn">QR code</button>
+         </div>
         </div>
-        <button type="submit">Submit</button>
+       
+
       </form>
     </>
   );
