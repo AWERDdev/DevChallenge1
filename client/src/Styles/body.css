@@ -11,7 +11,7 @@
 .QRcodeLink{
     width: 35vw;
     height: 5vh;
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
         border:1px solid rgb(0, 85, 255) ;
         outline:none;
     border-radius: 1rem;
@@ -48,8 +48,9 @@
     color: white;
     width: 9vw;
     height: 5vh;
-    margin-top: 7px;
+    margin-top: 14px;
     margin-right: 1rem;
     right: 0;
     min-width: 100px;
+    
 }
