@@ -7,15 +7,18 @@
    transform: translate(-50%, -50%);
 }
 
-
+:root{
+    --button-color:#3662E3;
+    --input-bgColor:hsl(225, 41%, 5%);
+}
 .QRcodeLink{
     width: 35vw;
     height: 5vh;
     padding: 1rem 2rem;
-        border:1px solid rgb(0, 85, 255) ;
+        border:1px solid #3662E3 ;
         outline:none;
     border-radius: 1rem;
-    background-color: hsl(217, 33%, 5%);
+    background-color:var(--input-bgColor);
     color: white;
         min-width: 300px;
         max-width: 600px;
@@ -44,7 +47,7 @@
 }
 .CreateQRCode-btn{
    position: absolute;
-    background-color: hsl(220, 100%, 55%);
+    background-color: #3662E3;
     color: white;
     width: 9vw;
     height: 5vh;

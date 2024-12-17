@@ -6,13 +6,13 @@
   padding: 0;
 }
 :root{
-  --Background-color:hsl(217, 33%, 12%);
+  --Background-color:#111729;
 }
 body, html {
   
   height: 100%;
   margin: 0;
-  background-color:hsl(217, 33%, 12%);
+  background-color:var(--Background-color);
   overflow: hidden;   
 }
 button{
