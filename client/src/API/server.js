@@ -8,12 +8,12 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
+const QRCodeGenURL = 'https://goqr.me/api/';
 
 app.get('/requestlink',(req,res)=>{
 
-    const URL = req.query.value
-
-console.log(URL)
+ const URL = req.query.value
+ console.log(URL)
 });
 
 app.listen(port,()=>{
