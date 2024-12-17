@@ -25,6 +25,11 @@ button{
   border: none;
   border-radius: .4rem;
   cursor: pointer;
+  background-color: #3662E3;
+  color: white;
+  width: 10vw;
+  height: 6vh;
+  
 
 }
 input{

@@ -35,3 +35,17 @@
     border-radius: 0.3rem;
     margin-top:2rem;
 }
+.buttons-contaner{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+   top: 70%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.BTN-svg{
+    width: 2vw;
+    height: auto;
+}

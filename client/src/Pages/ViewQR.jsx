@@ -1,5 +1,6 @@
 import '../Styles/ViewQR.css'
 import testimage from "../assets/QR_code_for_mobile_English_Wikipedia.svg.png"
+
 function ViewQR(){
     return(
         <>
@@ -79,8 +80,18 @@ function ViewQR(){
                 <div className="circle-bg">
                     <div className="QRcode"><img src={testimage} alt="user QRcode"className='QRCodeSrc' /></div>
                 </div>
-                <div className="buttons-contaner"></div>
+             
             </div>
+            
+            <div className="buttons-contaner">
+                  <button className="download-btn">
+                    Download
+                  </button>
+                  <button className="share-btn">
+                    Share
+                    
+                    </button>
+                </div>
         </div>
         
         
