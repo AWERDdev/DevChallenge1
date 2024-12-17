@@ -17,6 +17,19 @@ function Body() {
   const handleNavigation = () => {
     navigator('/ViewQRcode');
   };
+const SendData = ()=>{
+fetch(` http://localhost:3500/requestlink?value=${encodeURIComponent(Input_value)}`)
+.then(response => {
+  response.json()
+  console.log('URL sent Succesfuly')
+}
+)
+.catch(error=>{
+  console.error(`failed to send data \n ${error}`)
+})
+
+}
+
 
   return (
     <>
@@ -24,6 +37,7 @@ function Body() {
         onSubmit={(e) => {
           e.preventDefault();
           InputHandling();
+          SendData();
         }}
         id="Form"
       >
