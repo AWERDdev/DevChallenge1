@@ -7,6 +7,9 @@
 }
 :root{
   --Background-color:#111729;
+  
+  --button-color:#3662E3;
+  --input-bgColor:hsl(225, 41%, 5%);
 }
 body, html {
   

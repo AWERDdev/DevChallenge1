@@ -1,6 +1,13 @@
+:root{
+    
+    --button-color:#3662E3;
+    --input-bgColor:hsl(225, 41%, 5%);
+}
 .shadow{
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: right;
+    position: absolute;
+    right: 0;
 }

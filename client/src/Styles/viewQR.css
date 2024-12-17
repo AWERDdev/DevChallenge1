@@ -1,6 +1,37 @@
+:root{
+    --circle-bg-color:#4e80ee33;
+    --button-color:#3662E3;
+    --input-bgColor:hsl(225, 41%, 5%);
+}
+
 .label-container{
     display: flex;
     justify-content: flex-start;
     margin-top:2rem;
     margin-left: 5rem;
+}
+.QRcode-container{
+    display: grid;
+    justify-content: center;
+    position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+    
+
+}
+.circle-bg{
+    width: 17vw;
+    height: 17vw;
+    background-color: var(--circle-bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+.QRCodeSrc{
+    width: 13vw;
+    height: auto;
+    background-color: #F2F5F9;
+    border-radius: 0.3rem;
+    margin-top:2rem;
 }
