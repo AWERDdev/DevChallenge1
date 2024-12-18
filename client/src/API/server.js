@@ -8,12 +8,17 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-const QRCodeGenURL = 'https://goqr.me/api/';
+
+const qrWidth = '180';
+const qrCodesize= `${qrWidth}X${qrWidth}` 
+
 
 app.get('/requestlink',(req,res)=>{
-
- const URL = req.query.value
- console.log(URL)
+    const URL = req.query.value
+    const QRCodeGenURL = `https://api.qrserver.com/v1/create-qr-code/?size=${qrCodesize}&data=${URL} `;
+    res.json(QRCodeGenURL);
+    
+    // console.log(URL)
 });
 
 app.listen(port,()=>{

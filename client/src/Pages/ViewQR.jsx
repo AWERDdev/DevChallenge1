@@ -1,7 +1,29 @@
 import '../Styles/ViewQR.css'
-import testimage from "../assets/QR_code_for_mobile_English_Wikipedia.svg.png"
-
+// import testimage from "../assets/QR_code_for_mobile_English_Wikipedia.svg.png"
+import { useState , useEffect} from 'react'
 function ViewQR(){
+const  [CodeGenURL,setCodeGenURL] = useState('');
+const fetchQRCodeURL = () => {
+  fetch('http://localhost:3500/requestlink') 
+  .then((response) => {
+    // Parse the JSON response
+    return response.json();
+  })  
+  .then((data) => {
+      
+      console.log(data);
+      setCodeGenURL(data.url || data); 
+      console.log('URL received');
+    })
+    .catch((error) => {
+      console.error('Error fetching QR Code:', error);
+    });
+};
+
+useEffect(() => {
+  fetchQRCodeURL(); 
+}, []);
+fetchQRCodeURL
     return(
         <>
         <div className="label-container">
@@ -78,7 +100,13 @@ function ViewQR(){
 </div>
             <div className="QRcode-container">
                 <div className="circle-bg">
-                    <div className="QRcode"><img src={testimage} alt="user QRcode"className='QRCodeSrc' /></div>
+                    <div className="QRcode">
+                    {CodeGenURL ? (
+          <img src={CodeGenURL} alt="QR Code"className='QRCodeSrc' />
+        ) : (
+          <p>Loading QR Code...</p>
+        )}
+                      </div>
                 </div>
              
             </div>

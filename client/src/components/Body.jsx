@@ -9,7 +9,8 @@ function Body() {
   const InputHandling = () => {
     if (!Input_value) {
       console.log('Please enter a link');
-    } else {
+    }
+     else {
       handleNavigation();
     }
   };
