@@ -27,6 +27,8 @@
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    min-width: 160px;
+    min-height: 160px;
 }
 .QRCodeSrc{
     width: 13vw; 
@@ -36,6 +38,8 @@
     border-radius: 0.3rem;
     margin-top:2rem;
     padding: 0.5rem;
+    min-width: 100px;
+    min-height: auto;
 }
 .buttons-contaner{
     display: flex;

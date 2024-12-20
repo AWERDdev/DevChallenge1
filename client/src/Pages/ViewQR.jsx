@@ -3,6 +3,7 @@ import '../Styles/ViewQR.css'
 import { useState , useEffect} from 'react'
 function ViewQR(){
 const  [CodeGenURL,setCodeGenURL] = useState('');
+const [rawURL,setrawURL] = useState('');
 const fetchQRCodeURL = () => {
   fetch('http://localhost:3500/requestlink') 
   .then((response) => {
@@ -12,14 +13,28 @@ const fetchQRCodeURL = () => {
   .then((data) => {
       
       console.log(data);
-      setCodeGenURL(data.url || data); 
+      setCodeGenURL(data.url || data);
+       setrawURL(data)
       console.log('URL received');
     })
     .catch((error) => {
       console.error('Error fetching QR Code:', error);
     });
 };
-
+const DownloadQRCodeSRC = ()=>{
+const link = document.createElement('a')
+link.href = CodeGenURL 
+link.download = 'QR'
+link.click();
+}
+const ShareQRcodeQoute =  async()=>{
+  try{
+    await navigator.clipboard.writeText(rawURL);
+    console.log('text copied to clipboard')
+  }catch(error){
+    console.error(`Failed to copy text ${error}`)
+  }
+}
 useEffect(() => {
   fetchQRCodeURL(); 
 }, []);
@@ -112,10 +127,10 @@ fetchQRCodeURL
             </div>
             
             <div className="buttons-contaner">
-                  <button className="download-btn">
+                  <button className="download-btn"onClick={DownloadQRCodeSRC}>
                     Download
                   </button>
-                  <button className="share-btn">
+                  <button className="share-btn"onClick={ShareQRcodeQoute }>
                     Share
                     
                     </button>

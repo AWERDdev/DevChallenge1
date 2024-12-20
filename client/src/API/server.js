@@ -17,7 +17,6 @@ app.get('/requestlink',(req,res)=>{
     const URL = req.query.value
     const QRCodeGenURL = `https://api.qrserver.com/v1/create-qr-code/?size=${qrCodesize}&data=${URL} `;
     res.json(QRCodeGenURL);
-    
     // console.log(URL)
 });
 
