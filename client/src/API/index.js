@@ -22,7 +22,7 @@
         res.json(QRCodeGenURL);
         // console.log(URL)
     });
-    // app.listen(port,()=>{
-    //     console.log(`server is running on http://localhost:${port}`)
-    // })
-    module.exports = app
+    app.listen(port,()=>{
+        console.log(`server is running on http://localhost:${port}`)
+    })
+    // module.exports = app
