@@ -12,6 +12,10 @@
     const qrWidth = '180';
     const qrCodesize= `${qrWidth}X${qrWidth}` 
 
+    
+    app.get('/',(req,res)=>{
+        res.json({message:'hello world'})
+            })
     app.get('/api',(req,res)=>{
 res.json({message:'hello world'})
     })
@@ -21,7 +25,12 @@ res.json({message:'hello world'})
         res.json(QRCodeGenURL);
         // console.log(URL)
     });
-
+    app.get('/api/requestlink',(req,res)=>{
+        const URL = req.query.value
+        const QRCodeGenURL = `https://api.qrserver.com/v1/create-qr-code/?size=${qrCodesize}&data=${URL} `;
+        res.json(QRCodeGenURL);
+        // console.log(URL)
+    });
     app.listen(port,()=>{
         console.log(`server is running on http://localhost:${port}`)
     })
