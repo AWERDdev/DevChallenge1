@@ -12,7 +12,7 @@
     const qrWidth = '180';
     const qrCodesize= `${qrWidth}X${qrWidth}` 
 
-    app.get('/',(req,res)=>{
+    app.get('/api',(req,res)=>{
 res.json({message:'hello world'})
     })
     app.get('/requestlink',(req,res)=>{
