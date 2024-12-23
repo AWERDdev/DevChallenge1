@@ -1,12 +1,14 @@
-import '@Styles/ViewQR.css'
+import '../Styles/ViewQR.css'
 // import testimage from "../assets/QR_code_for_mobile_English_Wikipedia.svg.png"
 import { useState , useEffect} from 'react'
 function ViewQR(){
+  const urlToEncode = localStorage.getItem('qrCodeUrl');
+
 const  [CodeGenURL,setCodeGenURL] = useState('');
 const [rawURL,setrawURL] = useState('');
 const fetchQRCodeURL = () => {
-  // fetch('http://localhost:3500/requestlink')
-  fetch('dev-challenge1-apiapiapiapi.vercel.app/requestlink') 
+  fetch(`http://localhost:3500/requestlink?value=${encodeURIComponent(urlToEncode)}`)
+   
   .then((response) => {
     // Parse the JSON response
     return response.json();
@@ -17,7 +19,8 @@ const fetchQRCodeURL = () => {
       setCodeGenURL(data.url || data);
        setrawURL(data)
       console.log('URL received');
-      console.log(data || data.url)
+      console.log(data)
+      console.log(data.url)
     })
     .catch((error) => {
       console.error('Error fetching QR Code:', error);

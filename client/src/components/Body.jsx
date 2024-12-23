@@ -1,10 +1,11 @@
-import '@Styles/body.css';
+import '../Styles/body.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // For navigation
 
 function Body() {
   const [Input_value, setInput_value] = useState('');
   const navigator = useNavigate();
+  localStorage.setItem('qrCodeUrl', Input_value);
 
   const InputHandling = () => {
     if (!Input_value) {
@@ -19,8 +20,7 @@ function Body() {
     navigator('/ViewQRcode');
   };
 const SendData = ()=>{
-// fetch(` http://localhost:3500/requestlink?value=${encodeURIComponent(Input_value)}`)
-fetch(`dev-challenge1-apiapiapiapi.vercel.app/requestlink?value=${encodeURIComponent(Input_value)}`)
+fetch(` http://localhost:3500/requestlink?value=${encodeURIComponent(Input_value)}`)
 .then(response => {
   response.json()
   console.log('URL sent Succesfuly')
