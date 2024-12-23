@@ -1,4 +1,4 @@
-import '../Styles/ViewQR.css'
+import './ViewQR.css'
 // import testimage from "../assets/QR_code_for_mobile_English_Wikipedia.svg.png"
 import { useState , useEffect} from 'react'
 function ViewQR(){
