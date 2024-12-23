@@ -6,7 +6,7 @@ const  [CodeGenURL,setCodeGenURL] = useState('');
 const [rawURL,setrawURL] = useState('');
 const fetchQRCodeURL = () => {
   // fetch('http://localhost:3500/requestlink')
-  fetch('https://dev-challenge1-api.vercel.app/') 
+  fetch('dev-challenge1-apiapiapiapi.vercel.app/requestlink') 
   .then((response) => {
     // Parse the JSON response
     return response.json();
@@ -17,6 +17,7 @@ const fetchQRCodeURL = () => {
       setCodeGenURL(data.url || data);
        setrawURL(data)
       console.log('URL received');
+      console.log(data || data.url)
     })
     .catch((error) => {
       console.error('Error fetching QR Code:', error);

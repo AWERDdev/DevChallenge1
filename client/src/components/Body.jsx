@@ -20,7 +20,7 @@ function Body() {
   };
 const SendData = ()=>{
 // fetch(` http://localhost:3500/requestlink?value=${encodeURIComponent(Input_value)}`)
-fetch(`https://dev-challenge1-api.vercel.app/?value=${encodeURIComponent(Input_value)}`)
+fetch(`dev-challenge1-apiapiapiapi.vercel.app/requestlink?value=${encodeURIComponent(Input_value)}`)
 .then(response => {
   response.json()
   console.log('URL sent Succesfuly')
