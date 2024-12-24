@@ -21,11 +21,10 @@ function Body() {
   };
 const SendData = ()=>{
 fetch(` http://localhost:3500/requestlink?value=${encodeURIComponent(Input_value)}`)
-.then(response => {
-  response.json()
-  console.log('URL sent Succesfuly')
-}
-)
+.then(response => response.json())
+.then(data =>{
+  console.log( `data send successfully ${data}`)
+})
 .catch(error=>{
   console.error(`failed to send data \n ${error}`)
 })

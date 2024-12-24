@@ -25,6 +25,7 @@
                     const QRCodeGenURL = `https://api.qrserver.com/v1/create-qr-code/?size=${qrCodesize}&data=${URL}`;
                     res.json(QRCodeGenURL);
                     console.log('Generated URL:', QRCodeGenURL);
+                    console.log(URL)
                 } catch(error){
                     console.error(`Failed to fetch URL: ${error}`);
                     res.status(500).json({ error: 'Server error' });

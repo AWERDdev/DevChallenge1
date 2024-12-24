@@ -8,19 +8,16 @@ const  [CodeGenURL,setCodeGenURL] = useState('');
 const [rawURL,setrawURL] = useState('');
 const fetchQRCodeURL = () => {
   fetch(`http://localhost:3500/requestlink?value=${encodeURIComponent(urlToEncode)}`)
-   
   .then((response) => {
     // Parse the JSON response
     return response.json();
   })  
   .then((data) => {
       
-      console.log(data);
       setCodeGenURL(data.url || data);
        setrawURL(data)
       console.log('URL received');
-      console.log(data)
-      console.log(data.url)
+      console.log(data ||data.url)
     })
     .catch((error) => {
       console.error('Error fetching QR Code:', error);
