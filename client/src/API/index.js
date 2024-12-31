@@ -4,7 +4,14 @@
     const cors = require('cors');
 
 
-    app.use(cors());
+
+    app.use(cors({
+        origin: ['http://localhost:5173', 'http://localhost:3500',"https://devchallenge-frontend.vercel.app/","https://devchallenge-backend.vercel.app/"], 
+        
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        credentials: true,
+        allowedHeaders: ['Content-Type', 'Authorization']
+    }));
     app.use(express.json());
     app.use(express.urlencoded({extended:true}));
 
