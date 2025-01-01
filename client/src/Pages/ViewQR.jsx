@@ -39,7 +39,7 @@ const ShareQRcodeQoute =  async()=>{
 }
 useEffect(() => {
   fetchQRCodeURL(); 
-},[]);
+},);
 fetchQRCodeURL
     return(
         <>
