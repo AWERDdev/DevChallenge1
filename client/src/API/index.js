@@ -6,9 +6,8 @@
 
 
     app.use(cors({
-        origin: ['http://localhost:5173',"https://devchallenge-frontend.vercel.app/"], 
-        
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        origin: '*',  // During development - will allow all origins
+        methods: ['GET', 'POST', 'OPTIONS'],
         credentials: true,
         allowedHeaders: ['Content-Type', 'Authorization']
     }));

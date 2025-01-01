@@ -2,3 +2,4 @@ node_modules
 Mistakes.MD
 .env
 .codegpt
+.vercel
