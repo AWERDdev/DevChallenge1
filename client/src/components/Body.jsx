@@ -20,7 +20,8 @@ function Body() {
     navigator('/ViewQRcode');
   };
 const SendData = ()=>{
-fetch(` http://localhost:3500/requestlink?value=${encodeURIComponent(Input_value)}`)
+// fetch(` http://localhost:3500/requestlink?value=${encodeURIComponent(Input_value)}`)
+fetch(` https://devchallenge-backend.vercel.app/requestlink?value=${encodeURIComponent(Input_value)}`)
 .then(response => response.json())
 .then(data =>{
   console.log( `data send successfully ${data}`)

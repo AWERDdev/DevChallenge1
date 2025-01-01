@@ -7,7 +7,7 @@ function ViewQR(){
 const  [CodeGenURL,setCodeGenURL] = useState('');
 const [rawURL,setrawURL] = useState('');
 const fetchQRCodeURL = () => {
-  fetch(`http://localhost:3500/requestlink?value=${encodeURIComponent(urlToEncode)}`)
+  fetch(`https://devchallenge-backend.vercel.app/requestlink?value=${encodeURIComponent(urlToEncode)}`)
   .then((response) => {
     // Parse the JSON response
     return response.json();
