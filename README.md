@@ -6,9 +6,8 @@ Type in the termanil
 ```
 npm run dev
 ```
-inside the  client folder to run the frontend
-and type 
+inside the  client folder to run the frontend and type 
 ```
 npm run Devstart
 ```
-inside the API folder inside of the src folder in the client folder for the app to work
+inside the API folder inside of the src folder in the client folder to run the API for the app to work
