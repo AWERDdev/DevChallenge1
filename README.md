@@ -1,5 +1,11 @@
 # DevChallenge1
  This is my attempt at doing my first Dev challenge
+## important
+please download the modules by running
+```
+npm i
+```
+
 ## To run the app
 
 Type in the termanil 
